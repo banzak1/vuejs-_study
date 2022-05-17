@@ -16,11 +16,12 @@ export default {
   },
 
   methods: {
-    addTask(value) {
+    addTask($event) {
+      let value = $event.target.value;
       let task = new Task();
       task.completed = false;
       task.title = value;
-      console.log("Deu bom");
+      console.log(task);
     },
   },
 };
